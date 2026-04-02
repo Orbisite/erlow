@@ -3,7 +3,7 @@
  * et pointer vers un serveur statique qui sert `api-lab/`, ou utiliser des URLs raw GitHub de votre fork.
  */
 const MODEL_RAW =
-  import.meta.env.VITE_MODEL_RAW_BASE ?? 'https://raw.githubusercontent.com/Orbisite/model/main/api-lab'
+  import.meta.env.VITE_MODEL_RAW_BASE ?? 'https://raw.githubusercontent.com/Orbisite/model/lab-api/main'
 
 export const CONTENT_URL =
   import.meta.env.VITE_CONTENT_URL ?? `${MODEL_RAW}/content.json`
