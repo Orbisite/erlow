@@ -11,13 +11,16 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #fafaf9;
+  /* Fond réel : applyDocumentChrome (theme.json primary.surface) une fois le thème chargé */
+  background-color: #f4f7fd;
   color-scheme: light;
 }
 
 body {
   margin: 0;
+  min-height: 100%;
   font-family: Inter, system-ui, -apple-system, sans-serif;
-  background: linear-gradient(180deg, #ffffff 0%, #fafaf9 40%, #fff7ed 100%);
+  /* Pas de dégradé : sinon il recouvre html et la navbar flottante paraît « décalée » vs l’accueil */
+  background: transparent;
   color: var(--color-heading);
 }

@@ -72,7 +72,7 @@ function App() {
 
   useEffect(() => {
     if (status.loading || status.error || !content) {
-      applyDocumentChrome({ contentScheme: 'light', chromeSurface: '#fafaf9' })
+      applyDocumentChrome({ contentScheme: 'light', chromeSurface: '#f4f7fd' })
     }
   }, [status.loading, status.error, content])
 
