@@ -128,6 +128,11 @@ export function getContentScheme() {
   return remoteContentScheme
 }
 
+export function getPrimarySurface() {
+  const t = remoteThemes ?? fallbackThemes
+  return t.primary.surface
+}
+
 export function setRemoteThemes(next) {
   if (!next) {
     remoteThemes = null
