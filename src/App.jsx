@@ -45,9 +45,9 @@ function RoutedPage({ content, locale, setLocale }) {
 
   if (route.notFound) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-neutral-950 px-6 text-center text-neutral-300">
-        <p className="text-lg text-neutral-100">{uiString('notFoundTitle', locale)}</p>
-        <Link to="/" className="text-sm font-medium text-sky-400 hover:text-sky-300">
+      <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-stone-50 px-6 text-center text-stone-600">
+        <p className="text-lg font-medium text-stone-900">{uiString('notFoundTitle', locale)}</p>
+        <Link to="/" className="text-sm font-semibold text-amber-700 hover:text-amber-800">
           {uiString('notFoundLink', locale)}
         </Link>
       </main>
@@ -72,7 +72,7 @@ function App() {
 
   useEffect(() => {
     if (status.loading || status.error || !content) {
-      applyDocumentChrome({ contentScheme: 'dark', chromeSurface: '#0a0a0a' })
+      applyDocumentChrome({ contentScheme: 'light', chromeSurface: '#fafaf9' })
     }
   }, [status.loading, status.error, content])
 
@@ -133,7 +133,7 @@ function App() {
 
   if (status.loading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-neutral-950 text-neutral-400">
+      <main className="flex min-h-screen items-center justify-center bg-stone-50 text-stone-500">
         {uiString('loading', locale)}
       </main>
     )
@@ -141,9 +141,9 @@ function App() {
 
   if (status.error || !content) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center gap-3 bg-neutral-950 px-6 text-center text-neutral-300">
-        <p>{uiString('loadErrorTitle', locale)}</p>
-        <p className="max-w-md text-sm text-neutral-500">{status.error}</p>
+      <main className="flex min-h-screen flex-col items-center justify-center gap-3 bg-stone-50 px-6 text-center text-stone-700">
+        <p className="font-medium text-stone-900">{uiString('loadErrorTitle', locale)}</p>
+        <p className="max-w-md text-sm text-stone-500">{status.error}</p>
       </main>
     )
   }
